@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3F Tecnologia da Informação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header img {
+            width: 150px;
+        }
+        .search-container {
+            text-align: center;
+            padding: 20px;
+        }
+        input[type="text"], select {
+            padding: 10px;
+            margin: 5px;
+            width: 200px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #0073e6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005bb5;
+        }
+        .services, .evaluation {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .evaluation-form {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo-3f.png" alt="Logo 3F Tecnologia da Informação">
+    <h1>3F Tecnologia da Informação</h1>
+</header>
+
+<div class="search-container">
+    <h2>Encontre nossos serviços</h2>
+    <input type="text" id="searchInput" placeholder="Pesquise por serviço...">
+    <select id="filterSelect">
+        <option value="">Filtrar por serviço</option>
+        <option value="office">Office 2021</option>
+        <option value="windows">Windows 11</option>
+        <option value="notebook">Manutenção em Notebook</option>
+    </select>
+    <button onclick="searchService()">Pesquisar</button>
+</div>
+
+<div class="services">
+    <h2>Serviços oferecidos</h2>
+    <ul>
+        <li>Instalação do Office 2021 com ativação</li>
+        <li>Instalação do Windows 11 com ativação</li>
+        <li>Limpeza de disco virtualmente ou presencialmente</li>
+        <li>Manutenção em notebooks, computadores e celulares</li>
+    </ul>
+</div>
+
+<div class="evaluation">
+    <h2>Avalie nosso serviço</h2>
+    <div class="evaluation-form">
+        <label for="rating">Sua avaliação (1 a 5):</label>
+        <input type="number" id="rating" min="1" max="5">
+        <button onclick="submitRating()">Enviar Avaliação</button>
+    </div>
+</div>
+
+<footer>
+    <p>Texto Bíblico - Jó 19:25: "Eu sei que o meu Redentor vive, e por fim se levantará sobre a terra."</p>
+    <p>&copy; 2025 3F Tecnologia da Informação</p>
+</footer>
+
+<script>
+    function searchService() {
+        const searchInput = document.getElementById('searchInput').value.toLowerCase();
+        const filterSelect = document.getElementById('filterSelect').value;
+
+        // Exemplo de pesquisa simples (para expandir conforme sua necessidade)
+        alert(`Pesquisando por: ${searchInput} | Filtro: ${filterSelect}`);
+    }
+
+    function submitRating() {
+        const rating = document.getElementById('rating').value;
+        if (rating >= 1 && rating <= 5) {
+            alert(`Obrigado pela sua avaliação de ${rating} estrelas!`);
+            // Aqui você pode adicionar código para armazenar a avaliação
+        } else {
+            alert('Por favor, insira uma avaliação entre 1 e 5.');
+        }
+    }
+</script>
+
+</body>
+</html>
