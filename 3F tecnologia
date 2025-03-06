@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3F Tecnologia da Informação</title>
+    <title>3F Suporte da Tecnologia</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -62,8 +62,8 @@
 <body>
 
 <header>
-    <img src="logo-3f.png" alt="Logo 3F Tecnologia da Informação">
-    <h1>3F Tecnologia da Informação</h1>
+    <img src="logo-3f.png" alt="Logo 3F Suporte da Tecnologia">
+    <h1>3F Suporte da Tecnologia</h1>
 </header>
 
 <div class="search-container">
