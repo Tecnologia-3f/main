@@ -4,31 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3F Suporte da Tecnologia</title>
+    <link rel="icon" href="favicon-3f.png" type="image/png">
+    
+    <!-- Link para a fonte Orbitron (para o título) -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Link para a fonte Roboto (para os serviços oferecidos) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Link para o ícone do Instagram -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-image: url('mae-tecnologica.jpg');
+            background-size: cover;
+            background-position: center;
             margin: 0;
             padding: 0;
+            color: #333;
         }
         header {
-            background-color: #1a1a1a;
+            background-color: rgba(0, 123, 255, 0.7);
             color: #fff;
             padding: 10px 0;
             text-align: center;
         }
         header img {
-            width: 150px;
+            width: 150px; /* Tamanho da logo */
+            max-height: 50px; /* Ajusta a altura da logo */
+        }
+        header h1 {
+            font-family: 'Orbitron', sans-serif; /* Aplicando a fonte Orbitron ao título */
+            font-size: 36px; /* Tamanho do nome da página */
+            letter-spacing: 2px; /* Espaçamento entre as letras */
+            text-transform: uppercase; /* Deixa as letras em maiúsculas */
         }
         .search-container {
             text-align: center;
             padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
         }
         input[type="text"], select {
             padding: 10px;
             margin: 5px;
-            width: 200px;
+            width: 250px;
             font-size: 16px;
+            border: 1px solid #0073e6;
+            border-radius: 4px;
         }
         button {
             background-color: #0073e6;
@@ -37,6 +60,7 @@
             border: none;
             font-size: 16px;
             cursor: pointer;
+            border-radius: 4px;
         }
         button:hover {
             background-color: #005bb5;
@@ -44,18 +68,60 @@
         .services, .evaluation {
             margin: 20px;
             padding: 20px;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.9);
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: 'Roboto', sans-serif; /* Aplicando a fonte Roboto aos serviços */
+        }
+        .services h2, .evaluation h2 {
+            font-family: 'Roboto', sans-serif; /* Aplicando a fonte Roboto aos títulos de seções */
         }
         footer {
-            background-color: #1a1a1a;
+            background-color: rgba(0, 0, 0, 0.8);
             color: white;
             text-align: center;
             padding: 10px;
         }
+        footer img {
+            width: 100px; /* Logo no rodapé */
+            max-height: 40px; /* Ajusta a altura da logo */
+            margin-top: 10px;
+        }
         .evaluation-form {
             text-align: center;
+        }
+
+        /* Estilos para a seção de Contato */
+        .contact-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .contact-container h2 {
+            font-family: 'Roboto', sans-serif;
+        }
+        .contact-info {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .contact-info a {
+            color: #0073e6;
+            text-decoration: none;
+            margin: 5px 0;
+            display: block;
+        }
+        .contact-info a:hover {
+            color: #005bb5;
+        }
+        .social-icons i {
+            font-size: 24px;
+            margin: 10px;
+            color: #0073e6;
+        }
+        .social-icons i:hover {
+            color: #005bb5;
         }
     </style>
 </head>
@@ -63,7 +129,7 @@
 
 <header>
     <img src="logo-3f.png" alt="Logo 3F Suporte da Tecnologia">
-    <h1>3F Suporte da Tecnologia</h1>
+    <h1>3F Suporte da Tecnologia</h1> <!-- Nome da página com fonte tecnológica -->
 </header>
 
 <div class="search-container">
@@ -74,6 +140,9 @@
         <option value="office">Office 2021</option>
         <option value="windows">Windows 11</option>
         <option value="notebook">Manutenção em Notebook</option>
+        <option value="battery">Troca de Bateria</option>
+        <option value="ram">Troca de Memória RAM</option>
+        <option value="cleaning">Limpeza Completa</option>
     </select>
     <button onclick="searchService()">Pesquisar</button>
 </div>
@@ -85,6 +154,9 @@
         <li>Instalação do Windows 11 com ativação</li>
         <li>Limpeza de disco virtualmente ou presencialmente</li>
         <li>Manutenção em notebooks, computadores e celulares</li>
+        <li>Troca de Bateria</li>
+        <li>Troca de Memória RAM</li>
+        <li>Limpeza Completa do sistema</li>
     </ul>
 </div>
 
@@ -97,8 +169,24 @@
     </div>
 </div>
 
+<!-- Seção de Contato -->
+<div class="contact-container">
+    <h2>Entre em contato</h2>
+    <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:3ffinanceirorj1@gmail.com">3ffinanceirorj1@gmail.com</a></p>
+        <p><strong>Telefone:</strong> <a href="tel:+5511976259558">+55 11 97625-9558</a></p>
+    </div>
+    <div class="social-icons">
+        <!-- Instagram com o link correto -->
+        <a href="https://www.instagram.com/3f_suporte" target="_blank">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+    </div>
+</div>
+
 <footer>
     <p>Texto Bíblico - Jó 19:25: "Eu sei que o meu Redentor vive, e por fim se levantará sobre a terra."</p>
+    <img src="logo-3f.png" alt="Logo 3F Suporte da Tecnologia">
     <p>&copy; 2025 3F Suporte da Tecnologia</p>
 </footer>
 
@@ -107,7 +195,7 @@
         const searchInput = document.getElementById('searchInput').value.toLowerCase();
         const filterSelect = document.getElementById('filterSelect').value;
 
-        // Exemplo de pesquisa simples (para expandir conforme sua necessidade)
+        // Exemplo de pesquisa simples
         alert(`Pesquisando por: ${searchInput} | Filtro: ${filterSelect}`);
     }
 
@@ -115,7 +203,6 @@
         const rating = document.getElementById('rating').value;
         if (rating >= 1 && rating <= 5) {
             alert(`Obrigado pela sua avaliação de ${rating} estrelas!`);
-            // Aqui você pode adicionar código para armazenar a avaliação
         } else {
             alert('Por favor, insira uma avaliação entre 1 e 5.');
         }
