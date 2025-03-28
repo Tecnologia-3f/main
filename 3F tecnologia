@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="3F Suporte da Tecnologia - Serviços de informática, manutenção de notebooks, troca de bateria, instalação de Office 2021 e Windows 11.">
     <title>3F Suporte da Tecnologia</title>
     <link rel="icon" href="favicon-3f.png" type="image/png">
     
@@ -22,106 +23,129 @@
             margin: 0;
             padding: 0;
             color: #333;
+            line-height: 1.6;
         }
+
         header {
-            background-color: rgba(0, 123, 255, 0.7);
+            background-color: rgba(0, 123, 255, 0.8);
             color: #fff;
             padding: 10px 0;
             text-align: center;
         }
+
         header img {
             width: 150px; /* Tamanho da logo */
             max-height: 50px; /* Ajusta a altura da logo */
         }
+
         header h1 {
             font-family: 'Orbitron', sans-serif; /* Aplicando a fonte Orbitron ao título */
             font-size: 36px; /* Tamanho do nome da página */
             letter-spacing: 2px; /* Espaçamento entre as letras */
             text-transform: uppercase; /* Deixa as letras em maiúsculas */
+            margin: 10px 0;
         }
+
         .search-container {
             text-align: center;
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.9);
             border-radius: 8px;
+            margin: 20px auto;
+            max-width: 600px;
         }
+
         input[type="text"], select {
-            padding: 10px;
-            margin: 5px;
-            width: 250px;
+            padding: 12px;
+            margin: 8px 0;
+            width: 80%;
             font-size: 16px;
             border: 1px solid #0073e6;
             border-radius: 4px;
         }
+
         button {
             background-color: #0073e6;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 20px;
             border: none;
             font-size: 16px;
             cursor: pointer;
             border-radius: 4px;
         }
+
         button:hover {
             background-color: #005bb5;
         }
-        .services, .evaluation {
-            margin: 20px;
+
+        .services, .evaluation, .contact-container {
+            margin: 20px auto;
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.9);
             border-radius: 8px;
+            max-width: 800px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            font-family: 'Roboto', sans-serif; /* Aplicando a fonte Roboto aos serviços */
         }
-        .services h2, .evaluation h2 {
+
+        .services h2, .evaluation h2, .contact-container h2 {
             font-family: 'Roboto', sans-serif; /* Aplicando a fonte Roboto aos títulos de seções */
         }
+
         footer {
             background-color: rgba(0, 0, 0, 0.8);
             color: white;
             text-align: center;
             padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
+
         footer img {
             width: 100px; /* Logo no rodapé */
             max-height: 40px; /* Ajusta a altura da logo */
             margin-top: 10px;
         }
+
         .evaluation-form {
             text-align: center;
         }
 
-        /* Estilos para a seção de Contato */
-        .contact-container {
-            background-color: rgba(255, 255, 255, 0.9);
-            margin: 20px;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-        }
-        .contact-container h2 {
-            font-family: 'Roboto', sans-serif;
-        }
         .contact-info {
             font-size: 18px;
             margin-top: 10px;
         }
+
         .contact-info a {
             color: #0073e6;
             text-decoration: none;
             margin: 5px 0;
             display: block;
         }
+
         .contact-info a:hover {
             color: #005bb5;
         }
+
         .social-icons i {
             font-size: 24px;
             margin: 10px;
             color: #0073e6;
         }
+
         .social-icons i:hover {
             color: #005bb5;
+        }
+
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            .search-container, .services, .evaluation, .contact-container {
+                padding: 15px;
+                width: 90%;
+            }
         }
     </style>
 </head>
@@ -129,13 +153,13 @@
 
 <header>
     <img src="logo-3f.png" alt="Logo 3F Suporte da Tecnologia">
-    <h1>3F Suporte da Tecnologia</h1> <!-- Nome da página com fonte tecnológica -->
+    <h1>3F Suporte da Tecnologia</h1>
 </header>
 
 <div class="search-container">
     <h2>Encontre nossos serviços</h2>
-    <input type="text" id="searchInput" placeholder="Pesquise por serviço...">
-    <select id="filterSelect">
+    <input type="text" id="searchInput" placeholder="Pesquise por serviço..." aria-label="Pesquise por serviço...">
+    <select id="filterSelect" aria-label="Filtrar por serviço">
         <option value="">Filtrar por serviço</option>
         <option value="office">Office 2021</option>
         <option value="windows">Windows 11</option>
@@ -164,12 +188,11 @@
     <h2>Avalie nosso serviço</h2>
     <div class="evaluation-form">
         <label for="rating">Sua avaliação (1 a 5):</label>
-        <input type="number" id="rating" min="1" max="5">
+        <input type="number" id="rating" min="1" max="5" aria-label="Avaliação de 1 a 5">
         <button onclick="submitRating()">Enviar Avaliação</button>
     </div>
 </div>
 
-<!-- Seção de Contato -->
 <div class="contact-container">
     <h2>Entre em contato</h2>
     <div class="contact-info">
@@ -177,7 +200,6 @@
         <p><strong>Telefone:</strong> <a href="tel:+5511976259558">+55 11 97625-9558</a></p>
     </div>
     <div class="social-icons">
-        <!-- Instagram com o link correto -->
         <a href="https://www.instagram.com/3f_suporte" target="_blank">
             <i class="fab fa-instagram"></i> Instagram
         </a>
@@ -185,18 +207,47 @@
 </div>
 
 <footer>
-    <p>Texto Bíblico - Jó 19:25: "Eu sei que o meu Redentor vive, e por fim se levantará sobre a terra."</p>
+    <p class="biblical-quote">Texto Bíblico - Jó 19:25: "Eu sei que o meu Redentor vive, e por fim se levantará sobre a terra."</p>
     <img src="logo-3f.png" alt="Logo 3F Suporte da Tecnologia">
     <p>&copy; 2025 3F Suporte da Tecnologia</p>
 </footer>
 
+<style>
+    footer {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        text-align: center;
+        padding: 20px;
+        position: relative;
+    }
+
+    footer img {
+        width: 100px; /* Logo no rodapé */
+        max-height: 40px; /* Ajusta a altura da logo */
+        margin-top: 10px;
+    }
+
+    footer p {
+        margin: 5px 0;
+    }
+
+    .biblical-quote {
+        font-size: 14px; /* Menor tamanho de fonte */
+        color: #ccc; /* Cor mais suave para o texto bíblico */
+        font-style: italic; /* Estilo itálico para dar um toque mais suave */
+        margin-bottom: 10px;
+    }
+</style>
 <script>
     function searchService() {
         const searchInput = document.getElementById('searchInput').value.toLowerCase();
         const filterSelect = document.getElementById('filterSelect').value;
-
         // Exemplo de pesquisa simples
-        alert(`Pesquisando por: ${searchInput} | Filtro: ${filterSelect}`);
+        if (searchInput || filterSelect) {
+            alert(`Pesquisando por: ${searchInput} | Filtro: ${filterSelect}`);
+        } else {
+            alert('Por favor, insira um termo de pesquisa ou selecione um filtro.');
+        }
     }
 
     function submitRating() {
